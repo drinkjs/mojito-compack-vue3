@@ -1,0 +1,34 @@
+{
+  "version": "v1.0.0",
+  "props": {
+    "label": {
+      "type": "",
+      "comment": "按钮显示文本",
+      "default": ""
+    },
+    "primary": {
+      "type": false,
+      "default": false
+    },
+    "size": {
+      "type": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "default": "medium"
+    },
+    "backgroundColor": {
+      "type": ""
+    }
+  },
+  "events": {
+    "onAlert": {
+      "comment": "点击按钮弹框(label)=>void"
+    },
+    "onTest": {
+      "comment": "测试显示"
+    }
+  },
+  "libName": "VueButton"
+}

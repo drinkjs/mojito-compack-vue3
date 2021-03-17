@@ -1,0 +1,36 @@
+{
+  "name": "mojito-compack-vue3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "start-storybook -p 6006 ./resources --no-dll",
+    "build": "node build.js",
+    "build-storybook": "build-storybook"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@storybook/addon-actions": "^6.2.0-rc.0",
+    "@storybook/addon-essentials": "^6.2.0-rc.0",
+    "@storybook/addon-links": "^6.2.0-rc.0",
+    "@storybook/vue3": "^6.2.0-rc.0",
+    "babel-loader": "^8.2.2",
+    "vue-loader": "^16.1.2",
+    "css-loader": "^5.0.1",
+    "less": "^3.12.2",
+    "less-loader": "^5.0.0",
+    "style-loader": "^2.0.0",
+    "url-loader": "^4.1.1"
+  },
+  "dependencies": {
+    "copy-webpack-plugin": "^6.2.1",
+    "vue": "^3.0.7",
+    "webpack-merge": "^5.7.3",
+    "webpackbar": "^5.0.0-3",
+    "zip-webpack-plugin": "^4.0.1"
+  }
+}
