@@ -30,5 +30,8 @@
       "comment": "测试显示"
     }
   },
-  "libName": "VueButton"
+  "dependencies": [
+    "https://cdn.staticfile.org/vue/3.0.7/vue.runtime.global.prod.js"
+  ],
+  "name": "VueButton"
 }

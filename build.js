@@ -46,14 +46,14 @@ libs.forEach((libName) => {
   const declare = JSON.parse(
     fs.readFileSync(`${entryPath}/${declareFile}`, "utf8")
   );
-  declare.libName = libName;
+  declare.name = libName;
   fs.writeFileSync(
     `${entryPath}/${declareFile}`,
     JSON.stringify(declare, null, 2)
   );
 
   if (!declare.version) {
-    console.error(`${declare.libName}缺少版本号`);
+    console.error(`${declare.name}缺少版本号`);
     return;
   }
 
@@ -62,7 +62,7 @@ libs.forEach((libName) => {
       entry,
       output: {
         filename: "bundle.js",
-        library: libName + declare.version,
+        library: declare.name + declare.version,
         libraryTarget: "umd",
         path: path.resolve(__dirname, `dist/${libName}`),
       },
@@ -84,7 +84,7 @@ libs.forEach((libName) => {
                 loader: "url-loader",
                 options: {
                   limit: 8192,
-                  publicPath: `/public/libs/${declare.libName}${declare.version}/resources/`,
+                  publicPath: `/public/libs/${declare.name}${declare.version}/resources/`,
                   outputPath: "resources/",
                   name: "[name].[ext]",
                   esModule: false,
