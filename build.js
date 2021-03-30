@@ -71,7 +71,7 @@ libs.forEach((libName) => {
       entry,
       output: {
         filename: "bundle.js",
-        library: libName + declare.version,
+        library: declare.name + declare.version,
         libraryTarget: "umd",
         path: path.resolve(__dirname, `dist/${libName}`),
       },
