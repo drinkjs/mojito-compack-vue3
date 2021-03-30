@@ -1,14 +1,15 @@
 {
+  "name": "VueButton",
   "version": "v1.0.0",
   "props": {
     "label": {
-      "type": "",
+      "type": "string",
       "comment": "按钮显示文本",
       "default": ""
     },
     "primary": {
-      "type": false,
-      "default": false
+      "type": "boolean",
+      "default": true
     },
     "size": {
       "type": [
@@ -17,18 +18,14 @@
         "large"
       ],
       "default": "medium"
-    },
-    "backgroundColor": {
-      "type": ""
     }
   },
   "events": {
-    "onAlert": {
-      "comment": "点击按钮弹框(label)=>void"
-    },
-    "onTest": {
-      "comment": "测试显示"
+    "onClick": {
+      "comment": "点击()=>void"
     }
   },
-  "libName": "VueButton"
+  "dependencies": [
+    "https://cdn.staticfile.org/vue/3.0.9/vue.runtime.global.prod.js"
+  ]
 }

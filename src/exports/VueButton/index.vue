@@ -29,7 +29,7 @@ export default {
     },
   },
 
-  emits: ['alert'],
+  emits: ['click'],
 
   setup(props, { emit }) {
     props = reactive(props);
@@ -44,7 +44,7 @@ export default {
         backgroundColor: props.backgroundColor,
       })),
       onClick() {
-        emit('alert');
+        emit('click');
       }
     }
   },
